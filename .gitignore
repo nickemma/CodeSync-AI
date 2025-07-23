@@ -1,1 +1,113 @@
+# Environment variables
 .env
+.env.local
+.env.development
+.env.production
+*.env
+
+# Secrets and sensitive files
+config/development/*.env
+config/production/*.env
+config/staging/*.env
+nginx/ssl/cert.pem
+nginx/ssl/key.pem
+monitoring/alertmanager/alertmanager.yml
+
+# Database
+database/backup/*
+!database/backup/.gitkeep
+*.sql.backup
+*.dump
+postgres_data/
+redis_data/
+grafana_data/
+
+# Go backend
+go-backend/tmp/
+go-backend/*.log
+go-backend/vendor/
+go-backend/coverage.out
+go-backend/.air/
+
+# Python backend
+python-backend/.venv/
+python-backend/venv/
+python-backend/__pycache__/
+python-backend/**/__pycache__/
+python-backend/*.pyc
+python-backend/**/*.pyc
+python-backend/.pytest_cache/
+python-backend/htmlcov/
+python-backend/coverage.xml
+python-backend/.coverage
+python-backend/ml/models/trained/
+python-backend/ml/data/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.vite/
+frontend/coverage/
+frontend/.eslintcache
+
+# Docker
+docker-compose.override.yml
+.docker/
+
+# IDE and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# SSL certificates (except examples)
+*.pem
+*.key
+*.crt
+*.csr
+
+# Monitoring data
+prometheus_data/
+grafana_data/
+alertmanager_data/
+
+# Temporary files
+tmp/
+temp/
+.tmp/
+
+# Package managers
+go.work
+go.work.sum
+.pnpm-debug.log*
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Testing
+test-results/
+playwright-report/
+test-results.xml

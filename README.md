@@ -9,7 +9,7 @@ A real-time collaborative code review platform that combines human reviewers wit
 ## 🏗️ Architecture
 
 <div align="center">
-  <img  width="1000" alt="codesync-screenshot" src="system-design.png">
+  <img  width="1000" alt="codesync-screenshot" src="./docs/images/system-design.png">
 </div>
 
 ## 🔧 Technical Stack
