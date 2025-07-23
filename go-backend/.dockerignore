@@ -1,0 +1,8 @@
+.git
+.gitignore
+*.md
+rabbitmq-data
+postgres-data
+node_modules
+*.idea
+vendor/
