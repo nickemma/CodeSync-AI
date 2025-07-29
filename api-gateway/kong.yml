@@ -1,0 +1,30 @@
+_formate_version: "3.0"
+
+services:
+  - name: go-api
+    url: http://api-gateway:8080
+    routes:
+      - name: go-api-route
+        paths:
+          - /api
+        strip_path: false
+
+  - name: analysis-api
+    url: http://api-gateway:8000
+    routes:
+      - name: analysis-api-route
+        paths:
+          - /analysis
+        strip_path: false
+
+plugin:
+  - name: rate-limiting
+    service: go-api
+    config:
+      minute: 100
+      policy: local
+
+  - name: request-termination
+    config:
+      status_code: 403
+      message: "Forbidden"
